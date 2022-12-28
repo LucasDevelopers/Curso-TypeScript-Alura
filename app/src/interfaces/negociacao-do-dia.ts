@@ -1,5 +1,5 @@
 export interface NegociacoesdoDia {
 
-    montante: number;
+    montantes: number;
     vezes: number;
 }

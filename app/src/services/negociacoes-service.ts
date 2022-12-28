@@ -7,11 +7,11 @@ export class NegociacoesService {
         return fetch('http://localhost:8080/dados')
             .then(res => res.json())
             .then((dados: NegociacoesdoDia[]) => {
-                return dados.map(dadosDeHoje => {
+                return dados.map(dadoDeHoje => {
                     return new Negociacao(
                         new Date(), 
-                        dadosDeHoje.vezes, 
-                        dadosDeHoje.montante
+                        dadoDeHoje.vezes, 
+                        dadoDeHoje.montantes
                     )
                 })
             });
